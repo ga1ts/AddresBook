@@ -1,0 +1,48 @@
+CREATE DATABASE [AddressBook]
+GO
+USE [AddressBook]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Persons](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](50) NOT NULL,
+	[LastName] [nvarchar](50) NOT NULL,
+	[DateOfBirth] [datetime] NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
+ CONSTRAINT [PK_Persons] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Persons] ON 
+
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (1, N'Иван', N'Петров', CAST(N'1990-05-10T00:00:00.000' AS DateTime), N'ivan@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (2, N'Алексей', N'Смирнов', CAST(N'1985-12-15T00:00:00.000' AS DateTime), N'alexey@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (3, N'Елена', N'Иванова', CAST(N'1992-09-20T00:00:00.000' AS DateTime), N'elena@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (4, N'Дмитрий', N'Соколов', CAST(N'1988-07-25T00:00:00.000' AS DateTime), N'dmitry@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (5, N'Ольга', N'Васильева', CAST(N'1991-04-05T00:00:00.000' AS DateTime), N'olga@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (6, N'Андрей', N'Михайлов', CAST(N'1987-11-07T00:00:00.000' AS DateTime), N'andrey@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (7, N'Мария', N'Новикова', CAST(N'1993-08-12T00:00:00.000' AS DateTime), N'maria@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (8, N'Сергей', N'Федоров', CAST(N'1989-06-18T00:00:00.000' AS DateTime), N'sergey@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (9, N'Анастасия', N'Морозова', CAST(N'1994-03-01T00:00:00.000' AS DateTime), N'anastasia@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (10, N'Александр', N'Волков', CAST(N'1986-10-30T00:00:00.000' AS DateTime), N'alexander@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (11, N'Анна', N'Кузнецова', CAST(N'1995-02-14T00:00:00.000' AS DateTime), N'anna@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (12, N'Максим', N'Лебедев', CAST(N'1990-09-05T00:00:00.000' AS DateTime), N'maxim@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (13, N'Екатерина', N'Семенова', CAST(N'1987-04-18T00:00:00.000' AS DateTime), N'ekaterina@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (14, N'Илья', N'Егоров', CAST(N'1992-12-22T00:00:00.000' AS DateTime), N'ilya@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (15, N'Евгения', N'Павлова', CAST(N'1989-07-27T00:00:00.000' AS DateTime), N'evgenia@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (16, N'Павел', N'Козлов', CAST(N'1993-05-02T00:00:00.000' AS DateTime), N'pavel@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (17, N'Виктория', N'Степанова', CAST(N'1988-12-07T00:00:00.000' AS DateTime), N'victoria@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (18, N'Николай', N'Никитин', CAST(N'1991-09-10T00:00:00.000' AS DateTime), N'nikolay@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (19, N'София', N'Кузьмина', CAST(N'1986-06-15T00:00:00.000' AS DateTime), N'sofia@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (20, N'Роман', N'Ковалев', CAST(N'1994-03-20T00:00:00.000' AS DateTime), N'roman@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (21, N'Юлия', N'Орлова', CAST(N'1989-11-25T00:00:00.000' AS DateTime), N'yulia@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (22, N'Глеб', N'Андреев', CAST(N'1992-08-30T00:00:00.000' AS DateTime), N'gleb@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (23, N'Маргарита', N'Макарова', CAST(N'1987-06-04T00:00:00.000' AS DateTime), N'margarita@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (24, N'Денис', N'Захаров', CAST(N'1993-01-09T00:00:00.000' AS DateTime), N'denis@example.com')
+INSERT [dbo].[Persons] ([Id], [FirstName], [LastName], [DateOfBirth], [Email]) VALUES (25, N'Татьяна', N'Сорокина', CAST(N'1988-08-14T00:00:00.000' AS DateTime), N'tatiana@example.com')
+SET IDENTITY_INSERT [dbo].[Persons] OFF
